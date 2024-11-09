@@ -11,7 +11,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define NUM_THREADS 4  // Define the number of threads here
+#define NUM_THREADS 16
 
 // Global variables
 volatile bool match_found = false;
