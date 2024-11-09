@@ -11,7 +11,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define NUM_THREADS 16
+#define NUM_THREADS 8
 
 // Global variables
 volatile bool match_found = false;
@@ -21,13 +21,13 @@ pthread_mutex_t count_lock;
 FILE *output_file;
 FILE *log_file;
 
-// Function to check if the address starts with the pattern "D63[cC][hH][a4A]"
+// Function to check if the address contains the pattern "63[cC][hH][a4A][rR][sS5]"
 int matches_regex(const char *address) {
     regex_t regex;
     int ret;
 
-    // Compile the regular expression to match addresses starting with "D63[cC][hH][a4A]"
-    ret = regcomp(&regex, "^D63[cC][hH][a4A]", REG_EXTENDED | REG_NOSUB);
+    // Compile the regular expression to match addresses containing "63[cC][hH][a4A][rR][sS5]" anywhere in the string
+    ret = regcomp(&regex, "63[cC][hH][a4A][rR][sS5]", REG_EXTENDED | REG_NOSUB);
     if (ret) {
         fprintf(stderr, "Could not compile regex\n");
         return 0;
