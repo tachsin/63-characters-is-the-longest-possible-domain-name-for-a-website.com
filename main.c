@@ -1,3 +1,4 @@
+// https://63-characters-is-the-longest-possible-domain-name-for-a-website.com/
 // gcc main.c ./.libs/libdogecoin.a -I./include/dogecoin -L./.libs -L/opt/homebrew/opt/libevent/lib -L/opt/homebrew/opt/libunistring/lib -ldogecoin -levent -lunistring -lpthread -o main && ./main
 // gcc main.c ./.libs/libdogecoin.a -I./include/dogecoin -L./.libs -ldogecoin -lpthread -levent -lunistring -o main && ./main
 
@@ -11,7 +12,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define NUM_THREADS 8
+#define NUM_THREADS 4
 
 // Global variables
 volatile bool match_found = false;

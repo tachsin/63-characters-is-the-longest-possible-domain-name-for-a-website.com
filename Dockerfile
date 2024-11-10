@@ -1,3 +1,4 @@
+# https://63-characters-is-the-longest-possible-domain-name-for-a-website.com/
 # sudo docker build -t libdogecoin-builder .
 # sudo docker run -d --name libdogecoin-container libdogecoin-builder
 # sudo docker exec -it libdogecoin-container tail -f /libdogecoin/main.log
@@ -6,7 +7,7 @@ FROM ubuntu:latest
 
 # Install necessary packages
 RUN apt-get update && \
-    apt-get install -y git nano htop automake libtool build-essential libevent-dev libunistring-dev pkg-config
+    apt-get install -y git automake libtool build-essential libevent-dev libunistring-dev pkg-config
 
 # Clone the specific branch of libdogecoin
 RUN git clone --branch 0.1.3-dev https://github.com/dogecoinfoundation/libdogecoin.git /libdogecoin
